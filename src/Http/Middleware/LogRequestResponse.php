@@ -2,7 +2,7 @@
 
 namespace PatrickRiemer\HttpLog\Http\Middleware;
 
-use App\Models\HttpLog;
+use PatrickRiemer\HttpLog\Models\HttpLog;
 use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\Uid\Uuid;
