@@ -2,14 +2,18 @@
   "name": "patrickriemer/http-log",
   "description": "HTTP request and response logging to database",
   "type": "library",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "authors": [
     {
       "name": "Patrick Riemer",
       "email": "patrick@riemer.ai"
     }
   ],
-  "require": {},
+  "require": {
+    "php": ">=8.2",
+    "laravel/framework": ">=9"
+  },
+  "minimum-stability": "stable",
   "autoload": {
     "psr-4": {
       "PatrickRiemer\\HttpLog\\": "src"
