@@ -1,0 +1,25 @@
+{
+  "name": "patrickriemer/http-log",
+  "description": "HTTP request and response logging to database",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Patrick Riemer",
+      "email": "patrick@riemer.ai"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "PatrickRiemer\\HttpLog\\": "src"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "PatrickRiemer\\HttpLog\\HttpLogServiceProvider"
+      ]
+    }
+  }
+}
