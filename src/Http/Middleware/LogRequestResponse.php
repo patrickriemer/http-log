@@ -33,7 +33,7 @@ class LogRequestResponse
             'response_status' => $response->getStatusCode(),
             'response_headers' => json_encode($response->headers->all()),
             'response_content' => $response->getContent(),
-            'turnaround' => $end_time - $start_time
+            'turnaround' => ceil(($end_time - $start_time)/1e+6)
         ]);
 
         return $response;
