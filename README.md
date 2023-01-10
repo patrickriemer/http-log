@@ -12,7 +12,7 @@ Offers a middleware to automatically log HTTP requests and responses for API end
 * Response status code
 * Response header
 * Response content (JSON)
-* Turnaround time in nanoseconds (using PHP's hrtime)
+* Turnaround time in microseconds (based on PHP's hrtime, rounded up to the next microsecond)
 
 To enable the request logging for all API requests, add it to the api middleware group in the App\Http\Kernel.php:
 
