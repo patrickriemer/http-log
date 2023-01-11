@@ -11,6 +11,10 @@ class LogRequestResponse
 {
     public function handle(Request $request, Closure $next)
     {
+        if (! config('httplog.enabled')) {
+            return $next($request);
+        }
+
         $start_time = hrtime(true);
         $trace = Uuid::v7();
 

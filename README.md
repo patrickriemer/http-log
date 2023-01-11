@@ -25,3 +25,9 @@ protected $middlewareGroups = [
     ],
 ];
 ```
+
+The logging is deactivated per default since version 1.1.0. You can enable it in your .env file with the following snippet:
+
+```shell
+HTTP_LOG_ENABLED=true
+```
