@@ -1,7 +1,7 @@
 {
   "name": "patrickriemer/http-log",
   "description": "HTTP request and response logging to database",
-  "type": "library",
+  "type": "laravel",
   "license": "Apache-2.0",
   "authors": [
     {
