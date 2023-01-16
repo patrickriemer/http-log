@@ -31,3 +31,9 @@ The logging is deactivated per default since version 1.1.0. You can enable it in
 ```shell
 HTTP_LOG_ENABLED=true
 ```
+
+The middleware will log the request IP. If you are sitting behind Cloudflare or a similar service that forwards the real IP address, you can specify the header attribute in the environment file that should be used for logging. Example for Cloudflare:
+
+```shell
+HEADER_REAL_IP=x-real-ip
+```
