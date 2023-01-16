@@ -26,13 +26,18 @@ class LogRequestResponse
 
         $end_time = hrtime(true);
 
+        $ip = $request->ip();
+        if (! empty(config('httplog.header_real_ip')) && $request->hasHeader(config('httplog.header_real_ip'))) {
+            $ip = $request->header(config('httplog.header_real_ip'));
+        }
+
         HttpLog::create([
             'trace' => $trace,
             'request_method' => $request->getMethod(),
             'request_path' => $request->path(),
             'request_uri' => $request->getUri(),
             'request_headers' => json_encode($request->headers->all()),
-            'request_ip' => $request->ip(),
+            'request_ip' => $ip,
             'request_input' => json_encode($request->all()),
             'response_status' => $response->getStatusCode(),
             'response_headers' => json_encode($response->headers->all()),
