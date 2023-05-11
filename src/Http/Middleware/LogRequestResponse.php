@@ -16,7 +16,7 @@ class LogRequestResponse
         }
 
         $start_time = hrtime(true);
-        $trace = Uuid::v7();
+        $trace = Uuid::v4();
 
         $request->headers->add([
             'Request-Trace' => $trace
