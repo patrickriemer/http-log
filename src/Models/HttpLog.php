@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class HttpLog extends Model
 {
     protected $fillable = [
-        'trace',
+        'id',
         'request_method',
         'request_path',
         'request_uri',

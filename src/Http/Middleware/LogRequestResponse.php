@@ -32,7 +32,7 @@ class LogRequestResponse
         }
 
         HttpLog::create([
-            'trace' => $trace,
+            'id' => $trace,
             'request_method' => $request->getMethod(),
             'request_path' => $request->path(),
             'request_uri' => $request->getUri(),
