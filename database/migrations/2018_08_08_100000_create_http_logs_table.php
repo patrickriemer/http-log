@@ -9,7 +9,7 @@ class CreateHttpLogsTable extends Migration
     public function up()
     {
         Schema::create('http_logs', function (Blueprint $table) {
-            $table->id();
+            $table->uuid('id')->primary();
             $table->string('trace');
             $table->string('request_method');
             $table->string('request_path')->nullable();
