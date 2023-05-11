@@ -5,7 +5,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 use Symfony\Component\Uid\Uuid;
 
-class AlterHttpLogsTable extends Migration
+class ModifyHttpLogsTable extends Migration
 {
     public function up()
     {
