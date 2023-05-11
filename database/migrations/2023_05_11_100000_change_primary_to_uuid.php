@@ -10,14 +10,14 @@ return new class extends Migration
     public function up()
     {
         Schema::table('http_logs', function (Blueprint $table) {
-            $table->uuid('uuid')->first();
+            $table->uuid('uuid')->nullable(true)->first();
         });
 
         $records = \PatrickRiemer\HttpLog\Models\HttpLog::all();
         if($records) {
             foreach($records as $record) {
                 $record->uuid = Uuid::v4();
-                $record->update();
+                $record->save();
             }
         }
 
@@ -27,6 +27,7 @@ return new class extends Migration
         });
 
         Schema::table('http_logs', function (Blueprint $table) {
+            $table->uuid('uuid')->nullable(false)->change();
             $table->primary('uuid');
             $table->renameColumn('uuid', 'id');
         });
