@@ -23,7 +23,6 @@ return new class extends Migration
 
         Schema::table('http_logs', function (Blueprint $table) {
             $table->dropPrimary();
-            $table->unsignedInteger('id')->change();
             $table->dropColumn('id');
         });
 
